@@ -1,3 +1,16 @@
+<script LANGUAGE="JavaScript">
+<!--
+// Nannette Thacker http://www.shiningstar.net
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to Delete?");
+if (agree)
+        return true ;
+else
+        return false ;
+}
+// -->
+</script>
 
 <if @flag@   eq 0>
 <a href="@url@configure"><font color="#FF0000"><b>#beehive.Edit_configuration_info#  </B> </a></font>
@@ -9,7 +22,7 @@
 <li>
 
 <%
-
+ 
 
 # to fix the date format
 set dates $sess(datew)
@@ -17,7 +30,7 @@ set dates  [subst {[string range $dates 0 3]/[string range $dates 5 6]/[string r
 
  
 %>
- @sess.titlew@   (@sess.stype@)    @dates@   |<a href="@url@create-edit-session?number=@sess.number@&edit_flage=0">#beehive.session_edit#  </a> |<a href="@url@delete?numberw=@sess.number@&titlew=@sess.titlew@">#beehive.session_delete#  </a> |<a href="@url@duplicate1?numberw=@sess.number@&titlew=@sess.titlew@">#beehive.session_duplicate#  </a> |<a href="@url@viewIneractions?se=@sess.number@&titlew=@sess.titlew@">#beehive.session_view_transcript#   </a> 
+ @sess.titlew@   (@sess.stype@)    @dates@   |<a href="@url@create-edit-session?number=@sess.number@&edit_flage=0">#beehive.session_edit#  </a> |<a href="@url@delete?numberw=@sess.number@&titlew=@sess.titlew@" onClick="return confirmSubmit()">#beehive.session_delete#  </a> |<a href="@url@duplicate1?numberw=@sess.number@&titlew=@sess.titlew@">#beehive.session_duplicate#  </a> |<a href="@url@viewIneractions?se=@sess.number@&titlew=@sess.titlew@">#beehive.session_view_transcript#   </a> 
 
 
 </multiple>

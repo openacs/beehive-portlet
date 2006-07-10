@@ -30,7 +30,12 @@ set dates  [subst {[string range $dates 0 3]/[string range $dates 5 6]/[string r
 
  
 %>
- @sess.titlew@   (@sess.stype@)    @dates@   |<a href="@url@create-edit-session?number=@sess.number@&edit_flage=0">#beehive.session_edit#  </a> |<a href="@url@delete?numberw=@sess.number@&titlew=@sess.titlew@" onClick="return confirmSubmit()">#beehive.session_delete#  </a> |<a href="@url@duplicate1?numberw=@sess.number@&titlew=@sess.titlew@">#beehive.session_duplicate#  </a> |<a href="@url@viewIneractions?se=@sess.number@&titlew=@sess.titlew@">#beehive.session_view_transcript#   </a> 
+ @sess.titlew@   (@sess.stype@)    @dates@   |<a href="@url@create-edit-session?number=@sess.number@&edit_flage=0">#beehive.session_edit#  </a> |<a href="@url@delete?numberw=@sess.number@&titlew=@sess.titlew@" onClick="return confirmSubmit()">#beehive.session_delete#  </a> |<a href="@url@duplicate1?numberw=@sess.number@&titlew=@sess.titlew@">#beehive.session_duplicate#  </a>
+|<a href="@url1@/beehive/simulation/Sim_collaboration.html?hurl=@url1@/beehive/communication.tcl&se1=@sess.number@&flashservera=@flashservera@/">#beehive.session_simulation#  </a> 
+|<a href="@url@viewIneractions?se=@sess.number@&titlew=@sess.titlew@">#beehive.session_view_transcript#   </a> 
+
+
+
 
 
 </multiple>

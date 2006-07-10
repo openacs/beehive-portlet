@@ -22,6 +22,7 @@ set community_id [dotlrn_community::get_community_id -package_id $package_id]
 set comm_name [dotlrn_community::get_community_name_not_cached $community_id]
 set admin_id [dotlrn_community::list_admin_users $community_id]
 set user_id [ad_conn user_id]
+set flashservera [parameter::get -package_id $package_idn -parameter "FlashComServer"]
 
 
 
@@ -29,7 +30,9 @@ set class $comm_name
 set name [acs_user::get_element -user_id $user_id -element name]
 
 # list down the created session 
-set url [lindex [site_node::get_url_from_object_id -object_id $package_idn] 0] 
+set url [lindex [site_node::get_url_from_object_id -object_id $package_idn] 0]
+set url1 [parameter::get -package_id $package_idn -parameter "systemURL"]
+ 
 db_multirow sess get_info "SELECT * from beehive_ses where classname = :comm_name order by number"
 
 

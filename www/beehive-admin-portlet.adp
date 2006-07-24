@@ -50,17 +50,17 @@ set dates  [subst {[string range $dates 0 3]/[string range $dates 5 6]/[string r
 <br>#beehive.Create_new_activities_message#
 <br> 
  
-<br> 
+
  
  <br> <a href="@url@import?group=@comm_name@&url=@url@"><b> #beehive.Create_new_design#  </b></a> 
 
 <br>
-<br> 
+
     <a href="@url@new_technique?group=@comm_name@&newtechnique_flage=0"><b> #beehive.Create_new_activity_session#   </b></a> 
 <br>
-
 <br>
-<a href="@url@configure"><b>#beehive.Edit_configuration_info#  </B> </a>
+<br>
+<a href="@url@configure">#beehive.Edit_configuration_info#   </a>
 
 
 

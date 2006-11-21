@@ -46,10 +46,9 @@ set dates  [subst {[string range $dates 0 3]/[string range $dates 5 6]/[string r
 %>
 
 <if @session.dtype1@ not eq "checked">
-<a href="@url@/beehive/flash/collaboration.html?user_id1=@user_id@&hurl=@url@/beehive/communication.tcl&se1=@session.number@&flashservera=@flashservera@/" onClick="createCookie('ppkcookie1',@user_id@,1);"> @session.titlew@  (@session.stype@)    @dates@ </a>
-</if>
+<a href="@url@/beehive/flash/collaboration.html?user_id1=@user_id@&hurl=@url@/beehive/communication.tcl&se1=@session.number@&flashservera=@flashservera@/" onClick="createCookie('ppkcookie1',@user_id@,1);"> @session.titlew@  (@session.stype@)    @dates@ </a>|<a href="@url@/beehive/viewIneractions?se=@session.number@&titlew=@session.titlew@">#beehive.session_view_transcript#   </a></if>
 <else>
-<a href="@url@/beehive/groupset?user_id1=@user_id@&hurl=@url@/beehive/communication.tcl&url=@url@&se1=@session.number@&mx=@session.mx@&roles=@session.roles@&flashservera=@flashservera@/" onClick="createCookie('ppkcookie1',@user_id@,1);"> @session.titlew@  (@session.stype@)    @dates@ </a>
+<a href="@url@/beehive/groupset?user_id1=@user_id@&hurl=@url@/beehive/communication.tcl&url=@url@&se1=@session.number@&mx=@session.mx@&roles=@session.roles@&flashservera=@flashservera@/" onClick="createCookie('ppkcookie1',@user_id@,1);"> @session.titlew@  (@session.stype@)    @dates@ </a> |<a href="@url@/beehive/viewIneractions?se=@session.number@&titlew=@session.titlew@">#beehive.session_view_transcript#   </a>
 </else>
 
 
